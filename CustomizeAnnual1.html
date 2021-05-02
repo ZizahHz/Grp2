@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, intial-scale=1.0">
+  <style type="text/css">
+    @media  screen and (max-width: 600px) {
+      body{flex-direction: column; margin:0;}
+      #middle{flex-basis: 80vh;}
+      #left,{flex-basis:100px;}
+      #top{order: 1;}
+      #middle{order:2;}
+      #left{order:4;}
+      #bottom{order:5;}
+            }
+          body{display: flex;flex-wrap: wrap; text-align: center; font-weight: bold;}
+            #top, #bottom { height: 10vh;width: 100%;background-color: lightgrey; text-align: center;}
+            #left,#middle, #right {height: 80vh;}
+            #left, #right{flex-basis: 400px;}
+            #left,#right{background-color:#f4b5cd;}
+            #middle {background-color: #ffd0d9;flex-grow: 1; text-align: center;}
+
+            .topnav {
+              overflow: hidden;
+              background-color: #f2a7bd;
+              position: sticky;
+              width: 100%;
+              height:5vh;
+            }
+            .topnav a {
+              float: left;
+              display: block;
+              color: black;
+              opacity: 70%;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+            .topnav a:hover {
+              background-color: black;
+              color: white;
+            }  
+            #custom {width: 250px;
+                 margin: 0px;
+                 height: 400px;
+                 padding: 40px;
+                 border: 5px dotted black;      
+                 background-image: url('corporate/A2.jpg');  
+                 background-size: cover;         
+                 position: absolute;top:115px;left:650px; /right:190%/;
+                 text-align: center;
+                
+      }
+      .div2{
+         border: 1px solid;
+        width:200px; height:50px;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+
+      }
+      .drag{
+        width: 200px; height: 50px;
+        text-align: center;
+      }
+  </style>
+
+  <script>
+
+
+// Add function to submit the file
+function submit(){
+      var greeting = document.getElementById("greeting");
+      var name = document.getElementById("name");
+      var content = document.getElementById("content");
+      var venue = document.getElementById("venue");
+      var date = document.getElementById("date");
+      var time = document.getElementById("time");
+      var custom = document.getElementById("custom");
+      
+
+      localStorage.setItem("greeting", greeting.value);
+      localStorage.setItem("name", name.value);
+      localStorage.setItem("content", content.value);
+      localStorage.setItem("venue", venue.value);
+      localStorage.setItem("date", date.value);
+      localStorage.setItem("time", time.value);
+      localStorage.setItem("custom", custom.value);
+      alert("Saved!");
+    }
+
+
+
+function font(value){
+var canvas = document.getElementById("canvas");
+      if (value==1) {
+         
+        document.getElementById("greeting").style.fontFamily="Lucida Console ";
+        document.getElementById("name").style.fontFamily="Lucida Console ";
+        document.getElementById("content").style.fontFamily="Lucida Console ";
+        document.getElementById("venue").style.fontFamily="Lucida Console ";
+        document.getElementById("date").style.fontFamily="Lucida Console ";
+        document.getElementById("time").style.fontFamily="Lucida Console ";
+        
+      }
+      else if (value==2) {
+        document.getElementById("greeting").style.fontFamily="Monaco";
+        document.getElementById("name").style.fontFamily="Monaco";
+        document.getElementById("content").style.fontFamily="Monaco";
+        document.getElementById("venue").style.fontFamily="Monaco";
+        
+        document.getElementById("date").style.fontFamily="Monaco";
+        document.getElementById("time").style.fontFamily="Monaco";
+        
+      }
+      else if (value==3) {
+        document.getElementById("greeting").style.fontFamily="Impact ";
+        document.getElementById("name").style.fontFamily="Impact ";
+        document.getElementById("content").style.fontFamily="Impact ";
+        document.getElementById("venue").style.fontFamily="Impact ";
+        document.getElementById("date").style.fontFamily="Impact ";
+        document.getElementById("time").style.fontFamily="Impact ";
+        
+      
+      }
+    }
+
+      function fontsize(value){
+      var canvas = document.getElementById("canvas"); 
+  if (value==1) {
+    document.getElementById("greeting").style.fontSize="12px";
+        document.getElementById("name").style.fontSize="12px";
+        document.getElementById("content").style.fontSize="12px"; 
+        document.getElementById("venue").style.fontSize="12px";
+        document.getElementById("date").style.fontSize="12px";
+        document.getElementById("time").style.fontSize="12px";      }
+      else if (value==2) {
+        document.getElementById("greeting").style.fontSize="14px";
+        document.getElementById("name").style.fontSize="14px";
+        document.getElementById("content").style.fontSize="14px"; 
+        document.getElementById("venue").style.fontSize="14px";
+        document.getElementById("date").style.fontSize="14px";
+        document.getElementById("time").style.fontSize="14px"; 
+      }
+      else if (value==3) {
+        document.getElementById("greeting").style.fontSize="16px";
+        document.getElementById("name").style.fontSize="16px";
+        document.getElementById("content").style.fontSize="16px"; 
+        document.getElementById("venue").style.fontSize="16px";
+        document.getElementById("date").style.fontSize="16px";
+        document.getElementById("time").style.fontSize="16px"; 
+      }
+    }
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+ ev.target.appendChild(document.getElementById(data));
+
+if(document.getElementById(data).id == 'drag1'){             
+        document.getElementById('custom').style.sticker = "#"; 
+          }
+          else if(document.getElementById(data).id == 'drag2'){   
+          document.getElementById('custom').style.sticker = "#";
+          }
+
+          }
+          
+    
+</script>
+
+</head>
+<body>
+<header id = "top"><h1>Annual Dinner</h1></header>
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="customise.html">Custom card</a>
+   <a href="favourite.html">Favourite card</a>
+</div>
+    <article onload="load1()"  id = "left">
+    <h1>Customise</h1>
+    <h2>Header</h2>
+    <label >Drag the sticker below: <br></label>
+      <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img class="drag" id="drag1" src="corporate/S4.png" draggable="true" ondragstart="drag(event)" id="drag2" ></div><br>
+   <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img class="drag" id="drag2" src="corporate/S5.png" draggable="true" ondragstart="drag(event)" id="drag2" ></div>
+    
+    <h2>Text </h2> 
+    <label>Font style</label>
+    <select onchange="font(this.value)">
+    <option value="0">Please Select</option>
+    <option value="1" style="font-family: Lucida Console ;">Lucida Console </option>
+    <option value="2" style="font-family: Monaco;">Monaco</option>
+    <option value="3" style="font-family: Impact ;">Impact </option>
+  </select><br><br>
+  <label>Font size</label>
+  <select onchange="fontsize(this.value)">
+    <option value="0">Please Select</option>
+    <option value="1" style="font-size: 10;">12</option>
+    <option value="2" style="font-size: 12;">14</option>
+    <option value="3" style="font-size: 14;">16</option>
+  </select>
+    <br>
+    <br><button onclick="submit()">Done</button>
+  <a href="submit.html">
+       <button>Submit</button>
+     </a>
+
+        </article><br>
+    
+  
+  <form id = "middle">
+    <div id="custom"> 
+      <h2>You are invited </h2>
+    <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br><br>
+    <input type="text" placeholder="Enter greetings"name="Greeting" id="greeting" ><br><br>
+    <input type="text" placeholder="Enter recepient name"name="Name"id="name" pattern="[Aa-Zz].{10,}" ><br><br>
+    <input type="textarea" placeholder="Enter the content"name="content" id="content" ><br><br>
+    <input type="text" placeholder="Enter venue"name="venue" id="venue" ><br><br>
+    <input type="Date" placeholder="Enter date"name="Date" id="date" ><br><br>
+    <input type="time" placeholder="Enter time"name="Time" id="time" ><br>
+   
+  </form>
+   </div>
+  <footer id = "bottom" >Copyright @Muzira</footer>
+  
+    
+ 
+  </div>
+
+
+</body>
+</html>
