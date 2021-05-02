@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -307,4 +308,315 @@ if(document.getElementById(data).id == 'drag1'){
 
 
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, intial-scale=1.0">
+  <style type="text/css">
+    @media  screen and (max-width: 600px) {
+      body{flex-direction: column; margin:0;}
+      #middle{flex-basis: 80vh;}
+      #left,{flex-basis:100px;}
+      #top{order: 1;}
+      #middle{order:2;}
+      #left{order:4;}
+      #bottom{order:5;}
+            }
+          body{display: flex;flex-wrap: wrap; text-align: center; font-weight: bold;}
+            #top, #bottom { height: 10vh; width: 100%; background-color: lightgrey; text-align: center;}
+            #left,#middle, #right {height: 80vh;}
+            #left, #right{flex-basis: 400px;}
+            #left,#right{background-color:#f4b5cd;}
+            #middle {background-color: #ffd0d9;flex-grow: 1; text-align: center;}
+
+            .topnav {
+              overflow: hidden;
+              background-color: #f2a7bd;
+              position: sticky;
+              width: 100%;
+              height:5vh;
+            }
+            .topnav a {
+              float: left;
+              display: block;
+              color: black;
+              opacity: 70%;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+            .topnav a:hover {
+              background-color: black;
+              color: white;
+            }  
+            #custom {width: 250px;
+                 margin: 0px;
+                 height: 400px;
+                 padding: 40px;
+                 border: 5px dotted black;     
+                 background-size: cover;         
+                 position: absolute;top:115px;left:650px; /right:190%/;
+                 text-align: center;
+                
+      }
+      #border{background-size: cover;}
+      .div2{
+         border: 1px solid;
+        width:200px; height:50px;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+
+      }
+      .drag{
+        width: 200px; height: 50px;
+        text-align: center;
+      }
+
+      #sir, #madam, #dear {border: 1px solid;}
+      
+  </style>
+
+  <script>
+
+
+// Add function to submit the file
+function submit(){
+      var greeting = document.getElementById("greeting");
+      var name = document.getElementById("name");
+      var content = document.getElementById("content");
+      var venue = document.getElementById("venue");
+      var date = document.getElementById("date");
+      var time = document.getElementById("time");
+      var custom = document.getElementById("custom");
+      
+
+      localStorage.setItem("greeting", greeting.value);
+      localStorage.setItem("name", name.value);
+      localStorage.setItem("content", content.value);
+      localStorage.setItem("venue", venue.value);
+      localStorage.setItem("date", date.value);
+      localStorage.setItem("time", time.value);
+      localStorage.setItem("custom", custom.value);
+      alert("Saved!");
+    }
+
+
+
+function font(value){
+var custom = document.getElementById("custom");
+      if (value==1) {
+         
+        document.getElementById("greeting").style.fontFamily="Garamond ";
+        document.getElementById("name").style.fontFamily="Garamond ";
+        document.getElementById("content").style.fontFamily="Garamond ";
+        document.getElementById("venue").style.fontFamily="Garamond ";
+        document.getElementById("date").style.fontFamily="Garamond ";
+        document.getElementById("time").style.fontFamily="Garamond ";
+        
+      }
+      else if (value==2) {
+        document.getElementById("greeting").style.fontFamily="Rockwell";
+        document.getElementById("name").style.fontFamily="Rockwell";
+        document.getElementById("content").style.fontFamily="Rockwell";
+        document.getElementById("venue").style.fontFamily="Rockwell";
+        document.getElementById("date").style.fontFamily="Rockwell";
+        document.getElementById("time").style.fontFamily="Rockwell";
+        
+      }
+      else if (value==3) {
+        document.getElementById("greeting").style.fontFamily="Courier New ";
+        document.getElementById("name").style.fontFamily="Courier New ";
+        document.getElementById("content").style.fontFamily="Courier New ";
+        document.getElementById("venue").style.fontFamily="Courier New ";
+        document.getElementById("date").style.fontFamily="Courier New ";
+        document.getElementById("time").style.fontFamily="Courier New ";
+        
+      
+      }
+    }
+
+      function fontsize(value){
+      var custom = document.getElementById("custom"); 
+  if (value==1) {
+    document.getElementById("greeting").style.fontSize="12px";
+        document.getElementById("name").style.fontSize="12px";
+        document.getElementById("content").style.fontSize="12px"; 
+        document.getElementById("venue").style.fontSize="12px";
+        document.getElementById("date").style.fontSize="12px";
+        document.getElementById("time").style.fontSize="12px";      }
+      else if (value==2) {
+        document.getElementById("greeting").style.fontSize="14px";
+        document.getElementById("name").style.fontSize="14px";
+        document.getElementById("content").style.fontSize="14px"; 
+        document.getElementById("venue").style.fontSize="14px";
+        document.getElementById("date").style.fontSize="14px";
+        document.getElementById("time").style.fontSize="14px"; 
+      }
+      else if (value==3) {
+        document.getElementById("greeting").style.fontSize="16px";
+        document.getElementById("name").style.fontSize="16px";
+        document.getElementById("content").style.fontSize="16px"; 
+        document.getElementById("venue").style.fontSize="16px";
+        document.getElementById("date").style.fontSize="16px";
+        document.getElementById("time").style.fontSize="16px"; 
+      }
+    }
+    function changer(value){
+      var custom = document.getElementById("custom"); 
+      if(value==1){
+        custom.style.backgroundColor="purple";
+      }
+      
+      else if(value==2){
+        custom.style.backgroundColor="salmon";
+      }
+
+      else if(value==3){
+        custom.style.backgroundColor="red";
+      }
+      }
+    
+    function changer2(value){
+    var custom=document.getElementById("custom");
+      if(value==1){
+        custom.style.backgroundImage="url(custom/border-4.png)";
+      }
+      
+      else if(value==2){
+        custom.style.backgroundImage="url(custom/border-2.png)";
+      }
+
+      else if(value==3){
+        custom.style.backgroundImage="url(custom/border-3.png)";
+      }
+    }
+
+function storing(){
+  localStorage.setItem("sir", "Sir");
+  localStorage.setItem("madam", "Madam");
+  localStorage.setItem("dear", "Dear");
+
+  document.getElementById("Sir").innerHTML = localStorage.getitem("sir");
+  document.getElementById("Madam").innerHTML = localStorage.getitem("madam");
+  document.getElementById("dear").innerHTML = localStorage.getitem("Dear");
+}
+
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+ ev.target.appendChild(document.getElementById(data));
+
+if(document.getElementById(data).id == 'drag1'){             
+        document.getElementById('div1').style.sticker = "custom/sticker-1.jpg"; 
+          }
+          else if(document.getElementById(data).id == 'drag2'){   
+          document.getElementById('div1').style.sticker = "custom/sticker-2.jpg";
+          }
+
+          }
+
+    
+</script>
+
+</head>
+<body>
+<header id = "top"><h1>Customise your card</h1></header>
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="customise.html">Custom card</a>
+   <a href="Favourite.html">Favourite card</a>
+</div>
+    <div onload="load1()" id = "left">
+   
+    <h1>Customise</h1>
+    <h3>Drag greeting to greeting's input</h3>
+ <div onload="storing()" id="greeting" >
+        <h4><span id="sir" draggable="true" ondragstart="drag(event)">Sir</span>
+        <span id="madam" draggable="true" ondragstart="drag(event)">Madam</span>
+        <span  id="dear" draggable="true" ondragstart="drag(event)">Dear</span></h4>
+      </div>
+   
+    <!-- <h3>Heading</h3> -->
+    <label>Drag the sticker below: <br></label>
+      <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img class="drag" id="drag1" src="custom/sticker-1.jpg" draggable="true" ondragstart="drag(event)" id="drag2" ></div><br>
+   <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img class="drag" id="drag2" src="custom/sticker-2.jpg" draggable="true" ondragstart="drag(event)" id="drag2" ></div>
+
+  
+    <h3>Background</h3>
+  <label>Choose Background image:</label>
+    <select onchange="changer(this.value)">
+    <option value="0">please select option</option>
+    <option value="1">Purple</option>
+    <option value="2">Salmon</option>
+    <option value="3">Red</option>
+  </select>
+
+ <h3>Text</h3>
+    <label>Font style</label>
+    <select onchange="font(this.value)">
+    <option value="0">Please Select</option>
+    <option value="1" style="font-family: Garamond ;">Garamond </option>
+    <option value="2" style="font-family: Rockwell;">Rockwell</option>
+    <option value="3" style="font-family: Courier New ;">Courier New </option>
+  </select>
+  <label>Font size</label>
+  <select onchange="fontsize(this.value)">
+    <option value="0">Please Select</option>
+    <option value="1" style="font-size: 10;">12</option>
+    <option value="2" style="font-size: 12;">14</option>
+    <option value="3" style="font-size: 14;">16</option>
+  </select>
+   <!--  <h3>Border </h3>  -->
+    <label>Border style</label>
+    <select id="border" onchange="changer2(this.value)">
+    <option value="0">please select option</option>
+    <option value="1">Border 1</option>
+    <option value="2">Border 2</option>
+    <option value="3">Border 3</option>
+  </select>
+    <br>
+    <br><button onclick="submit()">Done</button>
+  <!--   <input type="reset" name="" value="Reset"><br> -->
+   <a href="submit.html"><button>Submit</button></a>
+
+     </div><br>
+    
+  
+  <form id = "middle">
+    <div  id="custom"> 
+    
+    <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"  ></div><br><br><br><br>
+    <input type="text" placeholder="Select greetings"name="Greeting" id="greeting" ><br><br>
+    <input type="text" placeholder="Enter recepient name"name="Name"id="name" pattern="[Aa-Zz].{10,}" ><br><br>
+    <input type="textarea" placeholder="Enter the content"name="content" id="content" ><br><br>
+    <input type="text" placeholder="Enter venue"name="venue" id="venue" ><br><br>
+    <input type="Date" placeholder="Enter date"name="Date" id="date" ><br><br>
+    <input type="time" placeholder="Enter time"name="Time" id="time" ><br>
+   
+  
+   </div></form>
+  <footer id = "bottom" >Copyright @Muzira</footer>
+  
+      
+    
+ 
+  </div>
+
+
+</body>
+>>>>>>> 446a32493575e0343687b3c31c857d787b87b6e9
 </html>
