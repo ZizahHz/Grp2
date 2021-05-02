@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "UTF-8">
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background-image: url("flower.jpg");
+   background-repeat: no-repeat;
+   background-size:cover;
+   position: sticky;
+/*  background: #ca9bf2;
+*/
+font-family: Verdana, sans-serif; margin:0
+}
+
+
+
+.header {
+  padding: 10px;
+  text-align: center;
+  background-color: #f2a7bd;
+  opacity: 90%;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #f2a7bd;
+  position: sticky;
+
+
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  opacity: 70%;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.topnav a:hover {
+  background-color: black;
+  color: white;
+}
+.rightcolumn {
+ background-color: #f2a7bd;
+ opacity: 90%;
+  width: 100%;
+  text-align: center;
+  background-position: center;
+  margin-top: 10px;
+  padding: 20px;
+  display: inline-block;
+
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: #f2a7bd;
+  margin-top: 10px;
+}
+
+.img-1{width: 300px;height: 300px;
+display: inline-block; transition: transform 2s ease-out;}
+
+.img-1:hover {  transform: scale(0.5);}
+
+
+@media screen and (max-width: 800px) {
+ .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+ @media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+</style>
+</head>
+
+
+<body>
+
+<div class="header">
+  <h1>Muzira</h1>
+  <p>Online invitations to bring you back together.</p>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="customise.html">Custom card</a>
+   <a href="Favourite.html">Favourite card</a>
+</div>
+
+<div class="row">
+	<div class="middle">
+
+	</div>
+
+  </div>
+  <div class="rightcolumn">
+  	<br>
+<h2>Choose your card category</h2>
+  <div class="img-1">
+  <a href="formal_1.html">
+  <img src="formal/1.jpg" style="width:100%">
+</a>
+</div>
+
+<div class="img-1">
+  <a href="informal_1.html">
+  <img src="informal/2.jpg" style="width:100%">
+  </a>
+</div>
+
+<div class="img-1">
+  <a href="corporate_1.html">
+  <img src="corporate/3.jpg" style="width:100%">
+</a></div>
+<h3>OR</h3>
+<h2>Customise your own card</h2>
+
+<div class="img-1">
+  <a href="customise.html">
+  <img src="custom/Custom.jpg" style="width:100%">
+</a>
+</div>
+</div><br>
+
+
+
+
+</div>
+
+<div class="footer">
+  <h4>Copyright @Muzira</h4>
+</div>
+
+
+
+</body>
+</html>

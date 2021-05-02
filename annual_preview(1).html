@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Preview_card</title>
+<meta charset = "UTF-8">
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
+
+	<style type="text/css">
+
+		
+		body{
+			color: rgb(51, 51, 51);
+    		font-family: "Basis Grotesque", Basis, sans-serif;
+    		background:#eee5e9;
+		}
+
+		#main{
+			box-sizing: border-box;
+			display: flex;
+			flex:0 1 auto;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin-right: -1.5rem;
+		    margin-left: -1.5rem;
+		    margin: 0;
+		    flex-grow: 1;
+		    align-items: stretch;
+		    margin-block:0px;
+		    line-height: 1.15;
+    		text-size-adjust: 100%;
+		}
+		
+		.image{
+			box-sizing: border-box;
+			padding-right: 1.5rem;
+			padding-left: 15rem;
+			flex:1 0 auto;
+			margin-block: 0px;
+		}
+
+		.frame-31 {
+			max-width: 100%;
+			border-style: none;
+			margin-block: 0px;
+			box-sizing: border-box;
+			height: 636px;
+			width: 454px;
+		}
+
+		.right-side {
+			box-sizing: border-box;
+			flex: 0 0 auto;
+		    padding-right: 1.5rem;
+		    padding-left: 1.5rem;
+		    display: flex;
+		    justify-content: center;
+		    flex-direction: column;
+		    padding-top: 5rem;
+		    -webkit-box-pack: center;
+		    width: 40%;
+		    min-width: 300px;
+		    max-width: 485px;
+		    position: relative;
+    		opacity: 1;
+    		transition: opacity ease 0.25s;
+    		background-color: white;
+    		margin:0px;
+    		color: rgb(51, 51, 51);
+    		line-height: 1.15;
+    		text-size-adjust: 100%;
+    		margin-block: 0px;
+    		background-color: #f2a7bd;
+		}
+
+		.right-center{
+			width: 100%;
+			align-self: center;
+			margin-block: 0px;
+		    box-sizing: border-box;
+		    color: rgb(51, 51, 51);
+    		line-height: 1.15;
+    		text-size-adjust: 100%;
+    		background-color: #f2a7bd;
+		}
+
+		.annual-main{
+			/*display: flex;*/
+			flex-direction: row;
+			justify-content: space-between;
+			font-size: 1.5rem;
+			align-items: center;
+			-webkit-box-align: center;
+			line-height: 1.15;
+    		text-size-adjust: 100%;
+
+		}
+		
+		.annual{
+			font-weight: 500;
+			font-size: 1.5rem;
+			line-height: 1;
+			margin: 0;
+			margin-block: 0px;
+			box-sizing: border-box;
+		}
+
+		h1{
+			display: block;
+			margin-inline-start: 0px;
+			margin-inlin-end: 0px;
+		}
+
+		.muzira{
+			color: #999999;
+			font-family: 'Basis Grotesque','Basis','sans-serif';
+    		font-size: 0.875rem;
+		}
+
+		@media screen and (min-width: 769px){
+		.customize {
+			height: 48px;
+    		padding: 15px 24px 17px;
+    		font-size: 12px;
+    		line-height: 16px;
+    	}
+    	@media screen and (min-width: 300px){
+		img {
+		}
+
+    	.customize{
+    		font-weight: 600;
+    		letter-spacing: 0.166em;
+    		border-radius: 0;
+		    border-style: solid;
+		    border-width: 2px;
+		    cursor: pointer;
+		    display: inline-block;
+		    margin: 0;
+		    outline: 0;
+		    margin-top: 0px;
+		    margin-right: 0px;
+		    margin-bottom: 0px;
+		    margin-left: 0px;
+		    outline: none;
+		    outline-color: initial;
+		    outline-style: none;
+		    outline-width: initial;
+		    text-transform: uppercase;
+		    background-color: #005ac8;
+		    border-color: #005ac8;
+		    color: white;
+		    width: 100%;
+		}
+
+		button { appearance: button; overflow: visible; text-rendering: auto; word-spacing: normal; text-indent: 0px; text-shadow: none; text-align: center; align-items: flex-start; border-image: initial; }
+
+		#customcolor. #eventdetails{
+			display: flex;
+			align-items: center;
+			margin: 1.5rem 0;
+			width: 100%
+			margin-block: 0px;
+			box-sizing: 0px;
+			line-height: 1.15;
+    		text-size-adjust: 100%;
+		}
+
+		.change-color, .add-details{ 
+			color: #777777;
+		    font-size: .875rem;
+		    line-height: 1.25rem;
+		    margin: 0;
+        	margin-block: 0px;
+            box-sizing: border-box;
+            display: block;
+		}
+
+		p {
+			margin-inline-start: 0px;
+    		margin-inline-end: 0px;
+		}
+
+	</style>
+	<body>
+		<div id="main">
+	<div class="image">
+		<img class="frame-31" src="corporate/B1.jpg">
+
+		
+	</div>
+	<div class="right-side">
+	<div class="right-center">
+		<div class="annual-main">
+			<h1 class="annual">Annual Dinner Invitation</h1>
+
+<div class="muzira">Design by Muzira</div><br><br>
+	<a href="CustomizeAnnual1.html">
+		<button class="customize"  type="DefaultButton">Customise</button><br><br>
+	</a>
+</div>
+</div>
+
+<div id="customcolor">
+			<p class="change-color">Change your card’s text, style and color</p><br>
+		</a>
+	</div>
+
+<div id="eventdetails">
+	<p class="add-details">Add your event’s details, make or import a guest list, and send with a click</p>
+</div>
+
+</body>
+</html>
+
+
