@@ -98,12 +98,12 @@ function font(value){
 var custom = document.getElementById("custom");
       if (value==1) {
          
-        document.getElementById("greeting").style.fontFamily="Garamond ";
-        document.getElementById("name").style.fontFamily="Garamond ";
-        document.getElementById("content").style.fontFamily="Garamond ";
-        document.getElementById("venue").style.fontFamily="Garamond ";
-        document.getElementById("date").style.fontFamily="Garamond ";
-        document.getElementById("time").style.fontFamily="Garamond ";
+        document.getElementById("greeting").style.fontFamily="Impact ";
+        document.getElementById("name").style.fontFamily="Impact ";
+        document.getElementById("content").style.fontFamily="Impact ";
+        document.getElementById("venue").style.fontFamily="Impact ";
+        document.getElementById("date").style.fontFamily="Impact ";
+        document.getElementById("time").style.fontFamily="Impact ";
         
       }
       else if (value==2) {
@@ -116,12 +116,12 @@ var custom = document.getElementById("custom");
         
       }
       else if (value==3) {
-        document.getElementById("greeting").style.fontFamily="Courier New ";
-        document.getElementById("name").style.fontFamily="Courier New ";
-        document.getElementById("content").style.fontFamily="Courier New ";
-        document.getElementById("venue").style.fontFamily="Courier New ";
-        document.getElementById("date").style.fontFamily="Courier New ";
-        document.getElementById("time").style.fontFamily="Courier New ";
+        document.getElementById("greeting").style.fontFamily="Lucida Heading ";
+        document.getElementById("name").style.fontFamily="Lucida Heading ";
+        document.getElementById("content").style.fontFamily="Lucida Heading ";
+        document.getElementById("venue").style.fontFamily="Lucida Heading ";
+        document.getElementById("date").style.fontFamily="Lucida Heading ";
+        document.getElementById("time").style.fontFamily="Lucida Heading ";
         
       
       }
@@ -246,7 +246,7 @@ if(document.getElementById(data).id == 'drag1'){
 
   
     <h3>Background</h3>
-  <label>Choose Background image:</label>
+  <label>Choose Background colour:</label>
     <select onchange="changer(this.value)">
     <option value="0">please select option</option>
     <option value="1">Purple</option>
@@ -258,9 +258,9 @@ if(document.getElementById(data).id == 'drag1'){
     <label>Font style</label>
     <select onchange="font(this.value)">
     <option value="0">Please Select</option>
-    <option value="1" style="font-family: Garamond ;">Garamond </option>
+    <option value="1" style="font-family: Impact ;">Impact </option>
     <option value="2" style="font-family: Rockwell;">Rockwell</option>
-    <option value="3" style="font-family: Courier New ;">Courier New </option>
+    <option value="3" style="font-family: Lucida Heading ;">Lucida Heading </option>
   </select>
   <label>Font size</label>
   <select onchange="fontsize(this.value)">
